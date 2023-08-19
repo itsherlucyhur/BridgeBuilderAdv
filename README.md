@@ -1,2 +1,10 @@
 # BridgeBuilderAdv
 This project designs a command-line game where there are two players: an engineer and a player. The automated engineer will try to hinder the Player's (the user) construction by placing obstacles along the path.
+
+The GameBoard class represents the game board for the BridgeBuilder game, where a Player and an Engineer play against each other. Tokens are placed using the placeToken() method, checkForWinDirection() checks for wins by iterating over rows and columns. The class also includes methods to display the board and to check if a position is empty or not. 
+ 
+The approach for designing the game started with creating a constructor to initialize the board with a 2D char array, and initially presenting the empty positions with '.''s. The placeToken() method allows tokens to be placed at certain positions on the board. The checkForWinDirection() method checks for winning conditions by iterating over rows and columns to compare the number of tokens to the size of the board. The Player class represented a player in the game and had methods to place tokens and manage the score. The Engineer class was implemented to represent different modes for making moves on the board. The implementation of the game involved initializing the board, allowing each player and engineer to place their tokens, checking for wins in different directions, and verifying ties. 
+ 
+One challenge was programming the hard mode, specifically determining the next empty position after the player's last position and finding the topmost empty position in a column if none were available. I had to overcome this by resetting the column index if it becomes greater than the board size, then iterating in reverse to find the next topmost empty position in the column. 
+
+To test the solution, different scenarios were considered, such as by placing tokens in different positions, varying board sizes, checking for wins in different directions (left-to-right, bottom-to-top bridge, and diagonal bridge), as well as verifying ties between the Player and the Engineer. 
